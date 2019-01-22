@@ -9,6 +9,9 @@ curl -u <user>:<pass> http://host.to.jenkins/api/json
 
 // 項目をフィルタリング
 curl -u <user>:<pass> http://host.to.jenkins/api/json?depth=2&tree=jobs[displayName,buildable,lastCompletedBuild[number,timestamp,result,url,duration]]
+
+//  ジョブ名一覧取得
+curl -u <user>:<pass> "http://host.to.jenkins/api/json?pretty=true&tree=jobs%5Bname%5D"
 ```
 
 ## crumb の取得
